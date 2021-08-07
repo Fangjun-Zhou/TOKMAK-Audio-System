@@ -14,11 +14,33 @@ namespace AudioSystem.Runtime
         /// The name of the layer.
         /// </summary>
         public string name;
+
+        /// <summary>
+        /// The prefab of the audio source for this layer
+        /// </summary>
+        public AudioSource sourcePrefab;
         
         /// <summary>
         /// All the audio clips in the layer.
         /// </summary>
         public AudioClip[] clips;
+    }
+
+    /// <summary>
+    /// The instance of AudioLayer, will be used on runtime
+    /// </summary>
+    [System.Serializable]
+    public class AudioLayerInstance
+    {
+        /// <summary>
+        /// The name of the layer.
+        /// </summary>
+        public string name;
+        
+        /// <summary>
+        /// All the audio sources which can be played on runtime in that layer
+        /// </summary>
+        public AudioSource[] playSource;
     }
     
     /// <summary>
