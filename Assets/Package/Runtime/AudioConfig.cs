@@ -41,6 +41,11 @@ namespace AudioSystem.Runtime
         /// All the audio sources which can be played on runtime in that layer
         /// </summary>
         public AudioSource[] playSource;
+
+        /// <summary>
+        /// The index of next audio source to play
+        /// </summary>
+        public int nextPlayIndex = 0;
     }
     
     /// <summary>
