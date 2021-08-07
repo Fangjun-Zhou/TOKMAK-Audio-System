@@ -3,7 +3,7 @@
 # Prerequisite
 
 ```
-
+"com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
 ```
 
 # Install
