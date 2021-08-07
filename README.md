@@ -27,3 +27,7 @@ Or you can copy and paste following content into you package manifest file:
 ```
 "com.fintokmak.audiosystem": "https://github.com/Fangjun-Zhou/Unity-Audio-System.git#upm-audiosystem"
 ```
+
+# Documentation
+
+All the documentation of Unity Audio-System can be viewed [here](https://fangjun-zhou.github.io/Unity-Audio-System/)
