@@ -13,11 +13,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{52f83516-a90a-2e72-ef67-25fca6f11107}</ProjectGuid>
+    <ProjectGuid>{e690f922-770f-b248-586b-9704ca60b4e2}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>AudioSystem.Runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -52,7 +52,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\FPS.cs" />
+     <Compile Include="Assets\Package\Runtime\AudioPlayer.cs" />
+     <Compile Include="Assets\Package\Runtime\IAudioPlayer.cs" />
+     <Compile Include="Assets\Package\Runtime\AudioConfig.cs" />
+     <None Include="Assets\Package\Runtime\AudioSystem.Runtime.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -275,8 +278,26 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.OSXStandalone.Extensions">
+ <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Plastic.Antlr3.Runtime">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="log4netPlastic">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="unityplastic">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.render-pipelines.core@10.5.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -623,87 +644,17 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <Reference Include="NaughtyAttributes.Core">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="NaughtyAttributes.Editor">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/NaughtyAttributes.Editor.dll</HintPath>
- </Reference>
- <Reference Include="NaughtyAttributes.Test">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/NaughtyAttributes.Test.dll</HintPath>
- </Reference>
- <Reference Include="NaughtyAttributes.Core">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AudioSystem.Runtime.csproj">
-      <Project>{e690f922-770f-b248-586b-9704ca60b4e2}</Project>
-      <Name>AudioSystem.Runtime</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
