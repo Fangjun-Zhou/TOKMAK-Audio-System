@@ -8,6 +8,21 @@ namespace AudioSystem.Runtime
     public interface IAudioPlayer
     {
         /// <summary>
+        /// If the AudioPlayer play the clip when Start()
+        /// </summary>
+        bool playOnstart { get; set; }
+        
+        /// <summary>
+        /// If the AudioPlayer loop play the audio
+        /// </summary>
+        bool isLoop { get; set; }
+        
+        /// <summary>
+        /// The loop time to play the clip
+        /// </summary>
+        float loopTime { get; set; }
+        
+        /// <summary>
         /// Play the audio from start
         /// </summary>
         void Play();
