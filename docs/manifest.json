@@ -1,0 +1,210 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.AudioConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.AudioConfig.html",
+          "hash": "tl+mWVwVMqMGjSDEupaCkMn6R/tBSFqwz3IQhZVWnAI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.AudioLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.AudioLayer.html",
+          "hash": "7sHze7EcFG84PkbcM6L3+ZvhdsJg/4pJy4q+v07aeW4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.AudioLayerInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.AudioLayerInstance.html",
+          "hash": "/opTEt6bFkIjlivU9RIdjfMM6P0ahAsW0VgzHOaKiSc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.AudioPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.AudioPlayer.html",
+          "hash": "EzkWcpPmvka+QgTFYPXxngfiZVvEfac4h6LajurCYkw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.IAudioPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.IAudioPlayer.html",
+          "hash": "7wnaB/l/aQSVngMjkZVXjvQlx+9LMsosqhuKgp8lYNk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.Utils.Shuffle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.Utils.Shuffle.html",
+          "hash": "yy/vZwii06BLGNWTKO1Q+rK7n2okPdTtvkH5+D0A+/c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.Utils.html",
+          "hash": "fYZhPyGQkYiEoHaFJkcQNFQkwn200RyeHAAYmSsBgkM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Runtime.html",
+          "hash": "A9iTI35Bjzxj4tUEJdQuMv8ieO4S3ZMiwUGFJ8DcL+M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Tests.Runtime.ShuffleTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Tests.Runtime.ShuffleTests.html",
+          "hash": "GqWSasSXla8habwjO8vPe0VxMO2JNDJzqq9GssQyOuQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AudioSystem.Tests.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AudioSystem.Tests.Runtime.html",
+          "hash": "EafDbHavNJBgeg5ebkWEEOLGcbH0673UetAcbOUv/Ig="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "RiXNO18vHCGevKkGkbKwayZQwkVlZrzA8J6y4jVmnwQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "J7NrB/cpenzxNU0qJq7zsJViLUTKth+hbHq6doSpuj0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "WQTANk+mjihItEAAOVVD2N7RTFnk1hv7X25MtQve8bM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
