@@ -13,11 +13,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{e690f922-770f-b248-586b-9704ca60b4e2}</ProjectGuid>
+    <ProjectGuid>{f7d16a39-b8e1-c728-efd4-45f291cb022f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>AudioSystem.Runtime</AssemblyName>
+    <AssemblyName>AudioSystem.Tests.Runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -52,11 +52,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Package\Runtime\AudioPlayer.cs" />
-     <Compile Include="Assets\Package\Runtime\IAudioPlayer.cs" />
-     <Compile Include="Assets\Package\Runtime\AudioConfig.cs" />
-     <Compile Include="Assets\Package\Runtime\Utils\Shuffle.cs" />
-     <None Include="Assets\Package\Runtime\AudioSystem.Runtime.asmdef" />
+     <Compile Include="Assets\Package\Tests\Runtime\ShuffleTests.cs" />
+     <None Include="Assets\Package\Tests\Runtime\AudioSystem.Tests.Runtime.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -279,26 +276,8 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="log4netPlastic">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="unityplastic">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
- </Reference>
- <Reference Include="ICSharpCode.NRefactory">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.render-pipelines.core@10.5.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ <Reference Include="nunit.framework">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -645,8 +624,11 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f2c1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
- <Reference Include="NaughtyAttributes.Core">
- <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/fangjunzhou/Documents/Unity_Project/Unity-Audio-System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -656,6 +638,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AudioSystem.Runtime.csproj">
+      <Project>{e690f922-770f-b248-586b-9704ca60b4e2}</Project>
+      <Name>AudioSystem.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

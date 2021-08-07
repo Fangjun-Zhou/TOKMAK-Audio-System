@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioSystem.Runtime", "Audi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{52f83516-a90a-2e72-ef67-25fca6f11107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioSystem.Tests.Runtime", "AudioSystem.Tests.Runtime.csproj", "{f7d16a39-b8e1-c728-efd4-45f291cb022f}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{52f83516-a90a-2e72-ef67-25fca6f11107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52f83516-a90a-2e72-ef67-25fca6f11107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52f83516-a90a-2e72-ef67-25fca6f11107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{f7d16a39-b8e1-c728-efd4-45f291cb022f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f7d16a39-b8e1-c728-efd4-45f291cb022f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f7d16a39-b8e1-c728-efd4-45f291cb022f}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{f7d16a39-b8e1-c728-efd4-45f291cb022f}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

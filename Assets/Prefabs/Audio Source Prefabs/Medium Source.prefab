@@ -64,21 +64,21 @@ AudioSource:
     - serializedVersion: 3
       time: 0.0625
       value: 0
-      inSlope: 4.138122
-      outSlope: 4.138122
+      inSlope: 2.084548
+      outSlope: 2.084548
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.24082935
+      outWeight: 0.39200005
     - serializedVersion: 3
       time: 0.25
-      value: 0.25
-      inSlope: -1.0004
-      outSlope: -1.0004
+      value: 0.19499207
+      inSlope: -0.1259052
+      outSlope: -0.1259052
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.57317424
     - serializedVersion: 3
       time: 0.50239563
       value: 0.08267212
