@@ -92,6 +92,7 @@ namespace AudioSystem.Runtime
                 // create the parent for current layer
                 GameObject layerParent = new GameObject(layer.name);
                 layerParent.transform.SetParent(gameObject.transform);
+                layerParent.transform.localPosition = Vector3.zero;
 
                 // instantiate all the audio sources in this layer
                 for (int i = 0; i < layer.clips.Length; i++)
