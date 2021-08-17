@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AudioSystem.Runtime.Utils;
+using FinTOKMAK.PETimeTask;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -52,11 +53,15 @@ namespace AudioSystem.Runtime
         /// </summary>
         private Coroutine _loopPlayCoroutine;
 
+        private Camera mainCam;
+
         #endregion
 
         private void Awake()
         {
             InitializeAudioPlayer();
+
+            mainCam = Camera.main;
         }
 
         private void Start()
@@ -94,6 +99,7 @@ namespace AudioSystem.Runtime
                     AudioClip layerClip = layer.clips[i];
 
                     AudioSource layerSource = Instantiate(layer.sourcePrefab, layerParent.transform);
+                    layerSource.transform.localPosition = Vector3.zero;
                     layerSource.clip = layerClip;
 
                     // add the Audio Source to the layer instance
@@ -166,28 +172,37 @@ namespace AudioSystem.Runtime
         /// </summary>
         private void PlayHelper()
         {
-            foreach (AudioLayerInstance layerInstance in _audioLayerInstances)
+            // Get the distance between audio source and main cam
+            float distance = (transform.position - mainCam.transform.position).magnitude;
+            
+            // Calculate the delay
+            float delay = distance / 340;
+
+            TimeSystem.Instance.AddTimeTask(((id, nextTime, interval, restTime) =>
             {
-                // if there's no clip in the layer, continue to the next layer
-                if (layerInstance.playSource == null || layerInstance.playSource.Length == 0)
+                foreach (AudioLayerInstance layerInstance in _audioLayerInstances)
                 {
-                    continue;
+                    // if there's no clip in the layer, continue to the next layer
+                    if (layerInstance.playSource == null || layerInstance.playSource.Length == 0)
+                    {
+                        continue;
+                    }
+                
+                    // Play the clip
+                    layerInstance.playSource[layerInstance.nextPlayIndex].Play();
+                
+                    // increase the index
+                    layerInstance.nextPlayIndex++;
+                
+                    // if the index exceed the length of the array
+                    // reset the index to 0 and shuffle the play list
+                    if (layerInstance.nextPlayIndex >= layerInstance.playSource.Length)
+                    {
+                        layerInstance.nextPlayIndex = 0;
+                        Shuffle.ArrayShuffle(layerInstance.playSource);
+                    }
                 }
-                
-                // Play the clip
-                layerInstance.playSource[layerInstance.nextPlayIndex].Play();
-                
-                // increase the index
-                layerInstance.nextPlayIndex++;
-                
-                // if the index exceed the length of the array
-                // reset the index to 0 and shuffle the play list
-                if (layerInstance.nextPlayIndex >= layerInstance.playSource.Length)
-                {
-                    layerInstance.nextPlayIndex = 0;
-                    Shuffle.ArrayShuffle(layerInstance.playSource);
-                }
-            }
+            }), delay);
         }
 
         /// <summary>
