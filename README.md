@@ -1,4 +1,4 @@
-# Unity Audio-System
+# TOKMAK-Audio-System
 
 Unity Audio System is a powerful Audio System providing audio extention such as audio mixing and random play.
 
@@ -21,7 +21,7 @@ Or you can copy and paste following content into your package manifest file:
 
 ## Installation
 
-To install Unity Audio-System you can directly add `https://github.com/Fangjun-Zhou/Unity-Audio-System.git#upm-audiosystem` into your package manager.
+To install TOKMAK-Audio-System you can directly add `https://github.com/Fangjun-Zhou/Unity-Audio-System.git#upm-audiosystem` into your package manager.
 
 Or you can copy and paste following content into you package manifest file:
 ```
@@ -30,4 +30,4 @@ Or you can copy and paste following content into you package manifest file:
 
 # Documentation
 
-All the documentation of Unity Audio-System can be viewed [here](https://fangjun-zhou.github.io/Unity-Audio-System/)
+All the documentation of TOKMAK-Audio-System can be viewed [here](https://fangjun-zhou.github.io/Unity-Audio-System/)
