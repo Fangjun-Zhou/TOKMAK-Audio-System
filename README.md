@@ -32,4 +32,4 @@ Or you can copy and paste following content into you package manifest file:
 
 # Documentation
 
-All the documentation of TOKMAK-Audio-System can be viewed [here](https://fangjun-zhou.github.io/Unity-Audio-System/)
+All the documentation of TOKMAK-Audio-System can be viewed [here](https://fangjun-zhou.github.io/TOKMAK-Audio-System/)
