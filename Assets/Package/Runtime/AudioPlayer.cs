@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AudioSystem.Runtime.Utils;
-using FinTOKMAK.PETimeTask;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -19,6 +19,9 @@ namespace AudioSystem.Runtime
 
         [BoxGroup("Audio Config")]
         public AudioConfig audioConfig;
+
+        [BoxGroup("Sound Speed")]
+        public bool simulateSoundSpeed;
         
         #endregion
 
@@ -171,15 +174,9 @@ namespace AudioSystem.Runtime
         /// <summary>
         /// The helper method to play the audio
         /// </summary>
-        private void PlayHelper()
+        private async void PlayHelper()
         {
-            // Get the distance between audio source and main cam
-            float distance = (transform.position - mainCam.transform.position).magnitude;
-            
-            // Calculate the delay
-            float delay = distance / 340;
-
-            TimeSystem.Instance.AddTimeTask(((id, nextTime, interval, restTime) =>
+            if (!simulateSoundSpeed)
             {
                 foreach (AudioLayerInstance layerInstance in _audioLayerInstances)
                 {
@@ -203,7 +200,39 @@ namespace AudioSystem.Runtime
                         Shuffle.ArrayShuffle(layerInstance.playSource);
                     }
                 }
-            }), delay);
+                return;
+            }
+            
+            // Get the distance between audio source and main cam
+            float distance = (transform.position - mainCam.transform.position).magnitude;
+            
+            // Calculate the delay
+            float delay = distance / 340;
+
+            await Task.Delay((int) (delay * 1000));
+            
+            foreach (AudioLayerInstance layerInstance in _audioLayerInstances)
+            {
+                // if there's no clip in the layer, continue to the next layer
+                if (layerInstance.playSource == null || layerInstance.playSource.Length == 0)
+                {
+                    continue;
+                }
+                
+                // Play the clip
+                layerInstance.playSource[layerInstance.nextPlayIndex].Play();
+                
+                // increase the index
+                layerInstance.nextPlayIndex++;
+                
+                // if the index exceed the length of the array
+                // reset the index to 0 and shuffle the play list
+                if (layerInstance.nextPlayIndex >= layerInstance.playSource.Length)
+                {
+                    layerInstance.nextPlayIndex = 0;
+                    Shuffle.ArrayShuffle(layerInstance.playSource);
+                }
+            }
         }
 
         /// <summary>

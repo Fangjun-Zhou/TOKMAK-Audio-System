@@ -2,8 +2,7 @@
     "name": "AudioSystem.Runtime",
     "rootNamespace": "",
     "references": [
-        "NaughtyAttributes.Core",
-        "FinTOKMAK.PETimeTask.Runtime"
+        "NaughtyAttributes.Core"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
